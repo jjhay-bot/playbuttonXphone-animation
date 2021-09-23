@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --dark-color: #635bff;
+            --light-color: #80e9ff;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+        }
+        svg {
+            cursor:pointer ;
+        }
+        #darkGroup {
+            fill: var(--dark-color);
+        }
+        #lightGroup {
+            fill: var(--light-color);
+        }
+        #dark1, #dark2, #light1 {
+            transition: all 1s ease;
+        }
+        #dark2 {
+            transform: translate(-80%);
+        }
+        svg:hover #light1 {
+            transform: translateX(20%);
+        }
+        svg:hover #dark1 {
+            transform: translateX(30%);
+            opacity: 0;
+        }
+        svg:hover #dark2 {
+            transform: translateX(0%);
+        }
+        strong {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <strong>
+        Play button animation
+    </strong>
+    <p> Hover and Click function</p>
+    <br>
+
+    <svg width="120" height="100" viewBox="10 20 80 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g id="triangles">
+    
+            <g id="lightGroup">
+                <path id="light1" opacity="0.7" d="M48.75 48.201C49.75 48.7783 49.75 50.2217 48.75 50.799L19.5 67.6865C18.5 68.2639 17.25 67.5422 17.25 66.3875L17.25 32.6125C17.25 31.4578 18.5 30.7361 19.5 31.3135L48.75 48.201Z"/>
+            </g>
+            <g id="darkGroup">
+                <path id="dark2" opacity="0.7" d="M48.75 48.201C49.75 48.7783 49.75 50.2217 48.75 50.799L19.5 67.6865C18.5 68.2639 17.25 67.5422 17.25 66.3875L17.25 32.6125C17.25 31.4578 18.5 30.7361 19.5 31.3135L48.75 48.201Z"/>
+                <path id="dark1" opacity="0.7" d="M60.75 48.201C61.75 48.7783 61.75 50.2217 60.75 50.799L31.5 67.6865C30.5 68.2639 29.25 67.5422 29.25 66.3875L29.25 32.6125C29.25 31.4578 30.5 30.7361 31.5 31.3135L60.75 48.201Z"/>
+            </g>
+        </g>
+    </svg>
+    
+    <script>
+        const svg = document.getElementById('triangles');
+
+        svg.onmouseenter = (e) => {
+            const colors = ['red', 'blue', 'green', 'orange', 'pink', 'purple']
+            const rando = () => colors[Math.floor(Math.random()*colors.length)]
+            document.documentElement.style.cssText = `
+                --dark-color: ${rando()};
+                --light-color: ${rando()};
+            `
+        }
+        svg.onclick = (e) => {
+            window.location.href = "animatephone.html"
+        }
+    </script>
+</body>
+</html>

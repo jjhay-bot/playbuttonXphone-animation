@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root {
+            --dark-color: #635bff;
+            --light-color: #80e9ff;
+        }
+        body {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 0;
+            margin: 0;
+        }
+        .container_phone {
+            display: grid;
+            place-content: center;
+            background-color:rgba(168, 119, 119, 0.493);
+            width: 100vw;
+        }
+        #skeleton {
+            animation: fadeInup 1s;
+        }
+        @keyframes fadeInup {
+            from {
+                opacity: 0;
+                transform:  translateY(20%);
+            }
+            to {
+                opacity: 1;
+                transform:  translateY(0);
+            }
+        }
+        #bolt g {
+            opacity: 0;
+            animation: dropIn 8s ease forwards infinite;
+            animation-delay: calc(var(--order) *150ms);
+        }
+        @keyframes dropIn {
+            20% {
+                opacity: 0;
+                transform: translateY(-20%);
+            }
+            30%, 100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        #returnPlay {
+            color: blue;
+            cursor: pointer;
+            /* height: 2rem; */
+            padding: 0.25rem 1rem;
+            background-color: rgb(80, 255, 103, .9);
+            border-radius: 1rem;
+            /* box-shadow: 2.5px 5px 5px 5px #74f5fa inset;  */
+            box-shadow: 7.5px 5px 10px 0px #a333be inset; 
+            border: #a233bebe outset 1px;
+        }
+        #returnPlay p {
+            padding: 0;
+            margin: 0;
+        }
+        #returnPlay:hover {
+            color: red;
+            padding: 0.25rem 1.25rem;
+            text-align: center;
+            box-shadow: 2.5px 1.5px 5px 0px #a333be; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container_phone">
+        <svg width="262.5" height="450" viewBox="0 0 175 300" fill="none" xmlns="http://www.w3.org/2000/svg"  >
+            <g id="phone">
+                <rect width="175" height="300" fill="white"/>
+                <g id="phone_2" filter="url(#filter0_d)">
+                    <rect x="12" y="12" width="152" height="276" rx="25" fill="#F9F9F9"/>
+                </g>
+                <g id="skeleton">
+                    <g id="images1">
+                        <g id="image1">
+                            <rect id="Rectangle 12" x="35" y="148" width="48" height="40" rx="2.5" fill="#E6E6E6"/>
+                            <g id="Vector 2">
+                                <path d="M46.1066 163.743L35.7406 174.011C35.2666 174.481 35 175.12 35 175.788V185.5C35 186.881 36.1193 188 37.5 188H80.5C81.8807 188 83 186.881 83 185.5V174.853C83 174.136 82.6922 173.454 82.1548 172.979L74.2399 165.99C73.3046 165.164 71.9034 165.154 70.9566 165.967L62.4816 173.243C61.4933 174.091 60.0191 174.039 59.0937 173.122L49.6254 163.743C48.651 162.778 47.0809 162.778 46.1066 163.743Z" fill="#C4C4C4"/>
+                            </g>
+                        </g>
+                        <g id="image1_2">
+                            <rect id="Rectangle 12_2" x="93" y="148" width="48" height="40" rx="2.5" fill="#E6E6E6"/>
+                            <g id="Vector 2_2">
+                                <path d="M104.107 163.743L93.7406 174.011C 93 175.788V185.5C93 186.881 94.1193 188 95.5 188H138.5C139.881 188 141 186.881 141 185.5V174.853C141 174.136 140.692 173.454 140.155 172.979L132.24 165.99C131.305 165.164 129.903 165.154 128.957 165.967L120.482 173.243C119.493 174.091 118.019 174.039 117.094 173.122L107.625 163.743C106.651 162.778 105.081 162.778 104.107 163.743Z" fill="#C4C4C4"/>
+                                <path d="M104.107 163.743L93.7406 174.011C93.2666 174.481 93 175.12 93 175.788V185.5C93 186.881 94.1193 188 95.5 188H138.5C139.881 188 141 186.881 141 185.5V174.853C141 174.136 140.692 173.454 140.155 172.979L132.24 165.99C131.305 165.164 129.903 165.154 128.957 165.967L120.482 173.243C119.493 174.091 118.019 174.039 117.094 173.122L107.625 163.743C106.651 162.778 105.081 162.778 104.107 163.743Z" fill="#C4C4C4"/>
+                            </g>
+                        </g>
+                        <g id="image1_3">
+                            <rect id="Rectangle 12_3" x="35" y="207" width="48" height="40" rx="2.5" fill="#E6E6E6"/>
+                            <g id="Vector 2_3">
+                                <path d="M46.1066 222.743L35.7406 233.011C35.2666 233.481 35 234.12 35 234.788V244.5C35 245.881 36.1193 247 37.5 247H80.5C81.8807 247 83 245.881 83 244.5V233.853C83 233.136 82.6922 232.454 82.1548 231.979L74.2399 224.99C73.3046 224.164 71.9034 224.154 70.9566 224.967L62.4816 232.243C61.4933 233.091 60.0191 233.039 59.0937 232.122L49.6254 222.743C48.651 221.778 47.0809 221.778 46.1066 222.743Z" fill="#C4C4C4"/>
+                                <path d="M46.1066 222.743L35.7406 233.011C35.2666 233.481 35 234.12 35 234.788V244.5C35 245.881 36.1193 247 37.5 247H80.5C81.8807 247 83 245.881 83 244.5V233.853C83 233.136 82.6922 232.454 82.1548 231.979L74.2399 224.99C73.3046 224.164 71.9034 224.154 70.9566 224.967L62.4816 232.243C61.4933 233.091 60.0191 233.039 59.0937 232.122L49.6254 222.743C48.651 221.778 47.0809 221.778 46.1066 222.743Z" fill="#C4C4C4"/>
+                            </g>
+                        </g>
+                        <g id="image1_4">
+                            <rect id="Rectangle 12_4" x="93" y="207" width="48" height="40" rx="2.5" fill="#E6E6E6"/>
+                            <g id="Vector 2_4">
+                                <path d="M104.107 222.743L93.7406 233.011C93.2666 233.481 93 234.12 93 234.788V244.5C93 245.881 94.1193 247 95.5 247H138.5C139.881 247 141 245.881 141 244.5V233.853C141 233.136 140.692 232.454 140.155 231.979L132.24 224.99C131.305 224.164 129.903 224.154 128.957 224.967L120.482 232.243C119.493 233.091 118.019 233.039 117.094 232.122L107.625 222.743C106.651 221.778 105.081 221.778 104.107 222.743Z" fill="#C4C4C4"/>
+                                <path d="M104.107 222.743L93.7406 233.011C93.2666 233.481 93 234.12 93 234.788V244.5C93 245.881 94.1193 247 95.5 247H138.5C139.881 247 141 245.881 141 244.5V233.853C141 233.136 140.692 232.454 140.155 231.979L132.24 224.99C131.305 224.164 129.903 224.154 128.957 224.967L120.482 232.243C119.493 233.091 118.019 233.039 117.094 232.122L107.625 222.743C106.651 221.778 105.081 221.778 104.107 222.743Z" fill="#C4C4C4"/>
+                            </g>
+                        </g>
+                    </g>
+                    <g id="phonecam">
+                        <rect id="Rectangle 8" opacity="0.5" x="130" y="34" width="16" height="2.5" fill="#C4C4C4"/>
+                        <rect id="Rectangle 10" opacity="0.5" x="130" y="30" width="16" height="2.5" fill="#C4C4C4"/>
+                        <rect id="Rectangle 9" opacity="0.5" x="130" y="38" width="16" height="2.5" fill="#C4C4C4"/>
+                        <circle id="Ellipse 1" cx="36.5" cy="34.5" r="6.5" fill="#C4C4C4" fill-opacity="0.75"/>
+                    </g>
+                    <g id="Group 1">
+                        <rect id="Rectangle 2" x="30" y="58" width="37" height="11" fill="#C4C4C4" fill-opacity="0.4"/>
+                        <rect id="Rectangle 3" x="71" y="58" width="37" height="11" fill="#C4C4C4" fill-opacity="0.4"/>
+                        <rect id="Rectangle 4" x="113" y="58" width="33" height="11" fill="#C4C4C4" fill-opacity="0.4"/>
+                        <rect id="Rectangle 7" x="130" y="73" width="16" height="11" fill="#C4C4C4" fill-opacity="0.4"/>
+                        <rect id="Rectangle 6" x="91" y="73" width="33" height="11" fill="#C4C4C4" fill-opacity="0.4"/>
+                        <rect id="Rectangle 5" x="30" y="73" width="56" height="11" fill="#C4C4C4" fill-opacity="0.4"/>
+                    </g>
+                    <rect id="Rectangle 12_5" x="49" y="102" width="85" height="25" rx="12.5" fill="#C4C4C4" fill-opacity="0.4"/>
+                </g>
+                <g id="bolt">
+                    <g id="bolt1" style="--order:1">
+                        <circle id="Ellipse 2_5" cx="78" cy="208" r="11" fill="#53E64B"/>
+                        <path id="Vector 1_5" d="M81 202H75.5L73 210H77L74.5 216L82.5 208H78L81 202Z" fill="white" stroke="url(#paint4_linear)" stroke-width="0.25"/>
+                    </g>
+                    <g id="bolt2"  style="--order:2">
+                        <circle id="Ellipse 2" cx="137" cy="208" r="11" fill="#53E64B"/>
+                        <path id="Vector 1" d="M140 202H134.5L132 210H136L133.5 216L141.5 208H137L140 202Z" fill="white" stroke="url(#paint0_linear)" stroke-width="0.25"/>
+                    </g>
+                    <g id="bolt3"  style="--order:3">
+                        <circle id="Ellipse 2_4" cx="78" cy="149" r="11" fill="#53E64B"/>
+                        <path id="Vector 1_4" d="M81 143H75.5L73 151H77L74.5 157L82.5 149H78L81 143Z" fill="white" stroke="url(#paint3_linear)" stroke-width="0.25"/>
+                    </g>
+                    <g id="bolt4"  style="--order:4">
+                        <circle id="Ellipse 2_2" cx="137" cy="149" r="11" fill="#53E64B"/>
+                        <path id="Vector 1_2" d="M140 143H134.5L132 151H136L133.5 157L141.5 149H137L140 143Z" fill="white" stroke="url(#paint1_linear)" stroke-width="0.25"/>
+                    </g>
+                    <g id="bolt5" style="--order:5">
+                        <rect id="Rectangle 11" x="49" y="100" width="85" height="25" rx="12.5" fill="#53E64B"/>
+                        <path id="Vector 1_6" d="M96 105H90.5L88 113H92L89.5 119L97.5 111H93L96 105Z" fill="white" stroke="url(#paint5_linear)" stroke-width="0.25"/>
+                    </g>
+                </g>
+            </g>
+            <defs>
+                <filter id="filter0_d" x="8" y="12" width="160" height="284" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                    <feOffset dy="4"/>
+                    <feGaussianBlur stdDeviation="2"/>
+                    <feComposite in2="hardAlpha" operator="out"/>
+                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow"/>
+                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow" result="shape"/>
+                </filter>
+                <linearGradient id="paint0_linear" x1="136.75" y1="202" x2="136.75" y2="216" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F9F9F9"/>
+                    <stop offset="1" stop-color="#F9F9F9" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="paint1_linear" x1="136.75" y1="143" x2="136.75" y2="157" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F9F9F9"/>
+                    <stop offset="1" stop-color="#F9F9F9" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="paint2_linear" x1="136.75" y1="143" x2="136.75" y2="157" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F9F9F9"/>
+                    <stop offset="1" stop-color="#F9F9F9" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="paint3_linear" x1="77.75" y1="143" x2="77.75" y2="157" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F9F9F9"/>
+                    <stop offset="1" stop-color="#F9F9F9" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="paint4_linear" x1="77.75" y1="202" x2="77.75" y2="216" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F9F9F9"/>
+                    <stop offset="1" stop-color="#F9F9F9" stop-opacity="0"/>
+                </linearGradient>
+                <linearGradient id="paint5_linear" x1="92.75" y1="105" x2="92.75" y2="119" gradientUnits="userSpaceOnUse">
+                    <stop stop-color="#F9F9F9"/>
+                    <stop offset="1" stop-color="#F9F9F9" stop-opacity="0"/>
+                </linearGradient>
+            </defs>
+        </svg>
+    </div> 
+    <h3 id="returnPlay">
+        <p>Return</p>
+    </h3>
+    <script>
+        const svg = document.getElementById('triangles');
+        onclick = (e) => {
+            window.location.href = "playbutton.html"
+        }
+    </script>
+</body>
+</html>
